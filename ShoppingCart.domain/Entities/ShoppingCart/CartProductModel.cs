@@ -20,6 +20,7 @@ namespace ShoppingCart.domain.Entities.ShoppingCart
         public int Quantity { get; set; }
         public decimal BasePrice { get; set; }
         public decimal FinalPrice { get; set; }
+        public decimal TotalPrice => Quantity * FinalPrice;
         public List<CartProductGroupModel> ProductGroup { get; set; }
         public CartModel Cart { get; set; }
 

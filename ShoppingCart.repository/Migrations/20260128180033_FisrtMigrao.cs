@@ -5,7 +5,7 @@
 namespace ShoppingCart.infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class frtMigaon : Migration
+    public partial class FisrtMigrao : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

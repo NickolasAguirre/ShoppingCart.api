@@ -10,8 +10,8 @@ using ShoppingCart.infrastructure.DatabaseContext;
 namespace ShoppingCart.infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260128155915_frtMigaon")]
-    partial class frtMigaon
+    [Migration("20260128172749_FistMigration")]
+    partial class FistMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
