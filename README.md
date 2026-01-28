@@ -1,3 +1,5 @@
+
+VIDEO DE EXPLICACION: https://especialidadesmedicaspe-my.sharepoint.com/:v:/g/personal/nickolas_aguirre_especialidadesmedicaspe_onmicrosoft_com/IQAox95vEWN8RZ57qqCStx5jAQir1u8Q_YqqL65gsiiXRUw?e=wqYkDx
 📌 Características principales
 
 ✅ Agregar productos configurables al carrito
@@ -280,6 +282,9 @@ Endpoint: DELETE api/ShoppingCart/RemoveProductAttribute/{CartId}
   "cartProductGroupId": ID_DEL_GRUPO_DEL_PRODUCTO,
   "cartAttributeId": ID_DEL_ATRIBUTO
 }
+
+
+
 
 =========================================================================
 Pruebas que fallaran:
