@@ -104,12 +104,10 @@ Endpoint: POST /api/shoppingcart/AddProduct
   ]
 }
 
-```md
 
 2.- Agregar producto al mismo carrito:
 Endpoint: POST /api/shoppingcart/AddProduct?cartId={cartId}
 
-```json
 {
   "productId": 3546345,
   "quantity": 1,
@@ -144,18 +142,15 @@ Endpoint: POST /api/shoppingcart/AddProduct?cartId={cartId}
   ]
 }
 
-```md
 
 3.- Metodo para obtener los productos del carrito:
 GET /api/shoppingcart/{cartId}
 
-```md
 
 4.- Metodo para actualizar todo el producto:
 Caso 1: Agregar nuevos registros:
 Endpoint: PUT /api/shoppingcart/UpdateProduct/{cartId}
 
-```json
 {
   "cartProductId": "CART_PRODUCT_ID_CREADO_INICIALMENTE",
   "productId": 3546345,
@@ -230,11 +225,10 @@ Endpoint: PUT /api/shoppingcart/UpdateProduct/{cartId}
   ]
 }
 
-```md
+
 
 Caso 2: Eliminar productos registrados:
 
-```json
 {
   "cartProductId": "CART_PRODUCT_ID_CREADO_INICIALMENTE",
   "productId": 3546345,
@@ -270,24 +264,20 @@ Caso 2: Eliminar productos registrados:
   ]
 }
 
-```md
 
 5.- Metodo para actualizar la cantidad del producto principal: 
 Endpoint: PUT /api/shoppingcart/UpdateQuantityProduct/{cartId}
 
-```json
 {
   "cartProductId": "ID_DEL_PRODUCTO",
   "quantity": 5
 }
 
-```md
 
 6.- Metodo para actualizar la cantidad del attributo de un producto no requerido
 Caso 1: Aumentar o restar cantidad:
 Endpoint: PUT /api/shoppingcart/UpdateQuantityProductAttribute/{cartId}
 
-```json
 {
   "cartProductId": ID_DEL_PRODUCTO,
   "cartProductGroupId": ID_DEL_GRUPO_DEL_PRODUCTO,
@@ -295,11 +285,9 @@ Endpoint: PUT /api/shoppingcart/UpdateQuantityProductAttribute/{cartId}
   "quantity": 3
 }
 
-```md
 
 Caso 2: Eliminar el atributo por la cantidad 0:
 
-```json
 {
   "cartProductId": "ID_DEL_PRODUCTO",
   "cartProductGroupId": "ID_DEL_GRUPO_DEL_PRODUCTO",
@@ -307,17 +295,14 @@ Caso 2: Eliminar el atributo por la cantidad 0:
   "quantity": 0
 }
 
-```md
 
 7.- Metodo para eliminar el producto entero:
 Endpoint: DELETE api/ShoppingCart/RemoveProduct/{CartProductId}/{CartId}
 
-```md
 
 8.- Metodo para eliminar atributos no requeridos:
 Endpoint: DELETE api/ShoppingCart/RemoveProductAttribute/{CartId}
 
-```json
 
 {
   "cartProductId": ID_DEL_PRODUCTO,
@@ -325,14 +310,12 @@ Endpoint: DELETE api/ShoppingCart/RemoveProductAttribute/{CartId}
   "cartAttributeId": ID_DEL_ATRIBUTO
 }
 
-```md
 
 
 =========================================================================
 Pruebas que fallaran:
 Error 1: Al añadir o actualizar ya que faltan campos requeridos:
 
-```json
 {
   "productId": 3546345,
   "quantity": 1,
@@ -349,11 +332,9 @@ Error 1: Al añadir o actualizar ya que faltan campos requeridos:
   ]
 }
 
-```md
 
 Error 2: Más atributos de los permitidos en grupo EQUAL_THAN
 
-```json
 {
   "productId": 3546345,
   "quantity": 1,
@@ -392,11 +373,9 @@ Error 2: Más atributos de los permitidos en grupo EQUAL_THAN
   ]
 }
 
-```md
 
 Error 3: Excede cantidad máxima del grupo LOWER_EQUAL_THAN
 
-```json
 {
   "productId": 3546345,
   "quantity": 1,
@@ -448,11 +427,9 @@ Error 3: Excede cantidad máxima del grupo LOWER_EQUAL_THAN
   ]
 }
 
-```md
 
 Error 4: Excede maxQuantity de atributo individual
 
-```json
 
 {
   "productId": 3546345,
@@ -497,11 +474,9 @@ Error 4: Excede maxQuantity de atributo individual
   ]
 }
 
-```md
 
 Error 5: Grupo no existe
 
-```json
 
 {
   "productId": 3546345,
@@ -537,11 +512,9 @@ Error 5: Grupo no existe
   ]
 }
 
-```md
 
 Error 6: Atributo no pertenece al grupo
 
-```json
 {
   "productId": 3546345,
   "quantity": 1,
