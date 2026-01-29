@@ -1,5 +1,6 @@
 
-VIDEO DE EXPLICACION: https://especialidadesmedicaspe-my.sharepoint.com/:v:/g/personal/nickolas_aguirre_especialidadesmedicaspe_onmicrosoft_com/IQAox95vEWN8RZ57qqCStx5jAQir1u8Q_YqqL65gsiiXRUw?e=wqYkDx
+# VIDEO DE EXPLICACION: 
+https://especialidadesmedicaspe-my.sharepoint.com/:v:/g/personal/nickolas_aguirre_especialidadesmedicaspe_onmicrosoft_com/IQAox95vEWN8RZ57qqCStx5jAQir1u8Q_YqqL65gsiiXRUw?e=wqYkDx
 📌 Características principales
 
 ✅ Agregar productos configurables al carrito
@@ -20,7 +21,7 @@ Ejemplo de Pruebas para cada metodo:
 
 1. CREAR CARRITO (AddProduct)
 Endpoint: POST /api/shoppingcart/AddProduct
-
+```json
 {
   "productId": 3546345,
   "quantity": 2,
@@ -101,9 +102,11 @@ Endpoint: POST /api/shoppingcart/AddProduct
     }
   ]
 }
+```md
 
 2.- Agregar producto al mismo carrito:
 Endpoint: POST /api/shoppingcart/AddProduct?cartId={cartId}
+```json
 {
   "productId": 3546345,
   "quantity": 1,
@@ -137,11 +140,16 @@ Endpoint: POST /api/shoppingcart/AddProduct?cartId={cartId}
     }
   ]
 }
+```md
+
 3.- Metodo para obtener los productos del carrito:
 GET /api/shoppingcart/{cartId}
+```md
+
 4.- Metodo para actualizar todo el producto:
 Caso 1: Agregar nuevos registros:
 Endpoint: PUT /api/shoppingcart/UpdateProduct/{cartId}
+```json
 {
   "cartProductId": "CART_PRODUCT_ID_CREADO_INICIALMENTE",
   "productId": 3546345,
@@ -215,7 +223,10 @@ Endpoint: PUT /api/shoppingcart/UpdateProduct/{cartId}
     }
   ]
 }
+```md
+
 Caso 2: Eliminar productos registrados:
+```json
 {
   "cartProductId": "CART_PRODUCT_ID_CREADO_INICIALMENTE",
   "productId": 3546345,
@@ -250,38 +261,53 @@ Caso 2: Eliminar productos registrados:
     }
   ]
 }
+```md
+
 5.- Metodo para actualizar la cantidad del producto principal: 
 Endpoint: PUT /api/shoppingcart/UpdateQuantityProduct/{cartId}
+```json
 {
   "cartProductId": "ID_DEL_PRODUCTO",
   "quantity": 5
 }
+```md
+
 6.- Metodo para actualizar la cantidad del attributo de un producto no requerido
 Caso 1: Aumentar o restar cantidad:
 Endpoint: PUT /api/shoppingcart/UpdateQuantityProductAttribute/{cartId}
+```json
 {
   "cartProductId": ID_DEL_PRODUCTO,
   "cartProductGroupId": ID_DEL_GRUPO_DEL_PRODUCTO,
   "cartAttributeId": ID_DEL_ATRIBUTO,
   "quantity": 3
 }
+```md
+
 Caso 2: Eliminar el atributo por la cantidad 0:
+```json
 {
   "cartProductId": "ID_DEL_PRODUCTO",
   "cartProductGroupId": "ID_DEL_GRUPO_DEL_PRODUCTO",
   "cartAttributeId": "ID_DEL_ATRIBUTO",
   "quantity": 0
 }
+```md
+
 7.- Metodo para eliminar el producto entero:
 Endpoint: DELETE api/ShoppingCart/RemoveProduct/{CartProductId}/{CartId}
+```md
 
 8.- Metodo para eliminar atributos no requeridos:
 Endpoint: DELETE api/ShoppingCart/RemoveProductAttribute/{CartId}
+```json
+
 {
   "cartProductId": ID_DEL_PRODUCTO,
   "cartProductGroupId": ID_DEL_GRUPO_DEL_PRODUCTO,
   "cartAttributeId": ID_DEL_ATRIBUTO
 }
+```md
 
 
 
